@@ -1,0 +1,10 @@
+#config/routes.yaml
+
+app_start:
+    path: /
+    controller: App\Controller\Login::login_form
+    
+
+app_login:
+    path: /login
+    controller: App\Controller\Login::work
