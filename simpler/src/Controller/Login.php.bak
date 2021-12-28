@@ -2,23 +2,23 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 
 class Login extends AbstractController
 {
-    /**
-     * @Route("/login", name="app_start")
+	
+	/**
+     * @Route(" / ")
      */
-    public function list()
+    public function main_screen()
     {
-        return new Response ('<form action="/login" method="get">
-  <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
-  </div>
+        return new Response (' form action="/login" method="post">
+		
+		<img src="https://www.parentsone.com/wp-content/uploads/2017/07/caturday-cat-cafe-shop-2.jpg" alt="Cat Cafe">
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
@@ -38,5 +38,14 @@ class Login extends AbstractController
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>');
+    }
+	
+	
+    /**
+     * @Route("/login")
+     */
+    public function annotate()
+    {
+        return new Response ('You finally got annotate to work');
     }
 }
