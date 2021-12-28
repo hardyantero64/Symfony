@@ -2,21 +2,29 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
-Class Login
+
+
+class Login extends AbstractController
 {
-	public function work(): Response
 	
-	{
-		return new Response ( '<html><body> Body </body></html>');
-	}
+	/**
+     * @Route("/ ")
+     */
+    public function main_screen()
+    {
+        return new Response ('Lets test annotation in AWS');
+    }
 	
 	
-	public function login_form(): Response
-	
-	{
-		return new Response ( '<html><body> login form </body></html>');
-	}
-	
-}
+    /**
+     * @Route("/login")
+     */
+    public function annotate()
+    {
+        return new Response ('You finally got annotate to work');
+    }
+} 
